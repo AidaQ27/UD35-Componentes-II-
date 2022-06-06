@@ -1,3 +1,7 @@
+
+
+![Captura de pantalla 2022-06-06 153859](https://user-images.githubusercontent.com/97692045/172171864-1bd51e09-9c06-429d-8556-73710737d1b4.jpg)
+
 # Formulario
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.0.
