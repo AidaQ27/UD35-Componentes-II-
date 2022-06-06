@@ -1,0 +1,49 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+</script>
+<h1>Formulario de contacto</h1>
+
+<form>
+  <div class="form-group">
+    <label for="nombre" class="input">Nombre: </label>
+    <input type="nombre" class="form-control" id="exampleInputNombre" aria-describedby="nombreHelp" placeholder="Nombre y apellido" [(ngModel)]="nombre" name="nombre">
+    <small id="nombre" class="form-text text-muted" *ngIf="nombre == ''" ><font color="#FF0000">Introduzca un email válido</font></small>
+  </div>
+  <div class="form-group">
+    <label for="email" class="input">Email:</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="ejemplo@dominio.com" [(ngModel)]="email" name="email">
+    <small id="email" class="form-text text-muted" *ngIf="email == ''" ><font color="#FF0000">Introduzca un email válido</font></small>
+  </div>
+  <div class="form-group">
+    <label for="mensaje" class="input">Mensaje: </label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" [(ngModel)]="mensaje" name="email"></textarea>
+    <small id="textarea" class="form-text text-muted" *ngIf="mensaje == ''"><font color="#FF0000">Introduzca un mensaje</font></small>
+  </div>
+  <div class="form-group">
+    <label for="password" class="input">2 + 3 = ?</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Respuesta" [(ngModel)]="password" name="password">
+    <small id="password" class="form-text text-muted" *ngIf="password == ''"><font color="#FF0000">Validación anti-spam incorrecta</font></small>
+  </div>
+
+
+
+  <div class="buttonbtn">
+    <button type="submit" class="btn btn-primary"  (click)="saveAlta()">Enviar</button>
+  </div>
+
+</form>
+
+<h1 class="registros">Listado registros</h1>
+
+<app-inputs [hijaresgistros]="listaregistros"></app-inputs>
+
